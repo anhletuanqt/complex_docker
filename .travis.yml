@@ -1,11 +1,11 @@
-sudo: required
+# sudo: required
 services:
   - docker
 
 before_install:
   - docker build -t anhletuanqt/react-test -f ./client/Dockerfile.dev ./client
 
-install: travis_wait mvn install
+# install: travis_wait mvn install
 
 script:
   - docker run anhletuanqt/react-test npm run test -- --coverage
